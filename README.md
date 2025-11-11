@@ -1,45 +1,58 @@
-# Appycodes Lead
+# 🧩 Appycodes Lead
 
-**Appycodes Lead** is a lightweight WordPress plugin for simple lead generation.  
-It allows you to collect leads through a clean AJAX-powered form and manage them directly inside your WordPress admin dashboard.
+**Appycodes Lead** is a lightweight, secure, and extendable WordPress plugin for collecting and managing leads.  
+It creates a simple AJAX-powered form that captures **Name** and **Email**, stores them in a custom database table, and provides a full-featured **admin panel** for viewing, filtering, and exporting leads.
+
+---
 
 ## 🚀 Features
 
-- Frontend form with **Name** and **Email**
-- **AJAX form submission** with validation and loader
-- Automatically stores leads in a custom database table (`wp_appycodes_lead`)
-- **Email notifications** to admin and user
-- Admin dashboard to:
-  - View all leads
-  - Filter by date
-  - Export leads to CSV
-  - Enable/disable email notifications
-- Secure and follows WordPress coding standards
+✅ Custom database table `wp_appycodes_lead` created on activation  
+✅ AJAX form submission (no page reload)  
+✅ Frontend validation (empty fields + valid email)  
+✅ Server-side sanitization and nonce protection  
+✅ Loader on submit button while processing  
+✅ Email notifications to admin & user (can be disabled)  
+✅ Admin lead management table with:
+  - Date filter (From/To)
+  - CSV export
+  - Pagination
+✅ Developer hooks (actions & filters) for customization  
+✅ Clean uninstall (optional table removal)
 
-## 🧩 Folder Structure
+---
 
-appycodes-lead/
-│
-├── appycodes-lead.php # main plugin file
-├── includes/
-│ ├── class-db.php
-│ ├── ajax-handler.php
-│ ├── admin-page.php
-│ ├── email-functions.php
-│ └── settings.php
-├── assets/
-│ ├── js/
-│ │ └── lead-form.js
-│ └── css/
-│ └── lead-form.css
-└── uninstall.php
+## 🧠 Plugin Overview
 
+| Area | Description |
+|------|--------------|
+| **Plugin Name** | Appycodes Lead |
+| **Purpose** | Collect and manage website leads |
+| **Database Table** | `wp_appycodes_lead` |
+| **Fields** | ID, Name, Email, Created_At |
+| **Shortcode** | `[appycodes_lead_form]` |
+| **Admin Menu** | Appycodes Lead → Leads / Settings |
 
-## ⚙️ Installation
+---
 
-1. Download the plugin ZIP or clone this repository:
+## ⚙️ Requirements
+
+- **WordPress:** 5.0 or later (tested up to 6.8.3)  
+- **PHP:** 7.4 or later (PHP 8.4+ supported)  
+- **Mail:** `wp_mail()` or SMTP plugin for sending emails
+
+---
+
+## 🧩 Installation
+
+1. **Clone or Download**
    ```bash
-   git clone https://github.com/YOURUSERNAME/Appycodes-Lead.git
-   
-2. Copy the folder appycodes-lead into your wp-content/plugins/ directory.
-3.  Activate Appycodes Lead from your WordPress dashboard.
+   git clone https://github.com/YOUR_USERNAME/Appycodes-Lead.git appycodes-lead
+
+
+👨‍💻 Author
+
+Developed by: Aman
+🌐 Website: https://appycodes.com
+
+📧 Support: support@appycodes.com
